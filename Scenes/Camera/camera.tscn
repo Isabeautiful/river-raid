@@ -4,7 +4,12 @@
 
 [node name="Camera" type="Camera2D"]
 offset = Vector2(0, -290)
+limit_left = -576
+limit_right = 576
 
 [node name="Pause Menu" parent="." instance=ExtResource("1_wmbm5")]
 offset_top = -290.0
 offset_bottom = -290.0
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(576, -1)
