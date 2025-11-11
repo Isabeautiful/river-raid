@@ -48,3 +48,4 @@ atirar={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(1.347661e-06, 0.59362626, 0.87553734, 1)

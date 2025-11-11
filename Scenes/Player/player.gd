@@ -3,7 +3,7 @@ extends CharacterBody2D
 const acceleration : float = 500
 const desaceleration : float = 400
 const max_speed : float = 200
-const min_speed : float = 50
+const min_speed : float = 100
 
 const aux_parada : float = 100 #variavel para o player parar de andar pra sempre
 
