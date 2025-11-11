@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds643wvcsb6yb"]
+
+[ext_resource type="Script" uid="uid://br6ca1vnmbupd" path="res://Scenes/Player/tiro.gd" id="1_vxbq8"]
+[ext_resource type="Texture2D" uid="uid://8g0h6jwk58ch" path="res://Assets/icon.svg" id="1_ym6md"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym6md"]
+size = Vector2(26, 62)
+
+[node name="Tiro" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+collision_layer = 4
+collision_mask = 10
+script = ExtResource("1_vxbq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(12.39502, 0, 2.8154116, 1)
+scale = Vector2(0.2, 0.488)
+texture = ExtResource("1_ym6md")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ym6md")
+debug_color = Color(0.991069, 0, 0.27625036, 0.41960785)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
