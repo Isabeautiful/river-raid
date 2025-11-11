@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://bafblokbbf42b"]
+[gd_scene load_steps=2 format=3 uid="uid://bafblokbbf42b"]
+
+[ext_resource type="PackedScene" uid="uid://bwlti2td3604u" path="res://Scenes/UI/Menu/pause_menu.tscn" id="1_wmbm5"]
 
 [node name="Camera" type="Camera2D"]
 offset = Vector2(0, -290)
+
+[node name="Pause Menu" parent="." instance=ExtResource("1_wmbm5")]
+offset_top = -290.0
+offset_bottom = -290.0
