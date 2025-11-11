@@ -74,7 +74,7 @@ texture = ExtResource("1_tlcug")
 7:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3mqfk"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_4dpyx")
 
 [node name="Level 1" type="Node2D"]

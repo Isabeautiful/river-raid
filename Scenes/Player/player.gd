@@ -8,6 +8,11 @@ const min_speed : float = 100
 const aux_parada : float = 100 #variavel para o player parar de andar pra sempre
 
 func _physics_process(delta: float) -> void:
+	#Collision Check
+	var collision = get_last_slide_collision()
+	if collision != null:
+		print("Explode")
+		get_tree().quit()
 	
 	#Movimentacao Horizontal
 	if Input.is_action_pressed("esquerda"):
