@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var direcao: Vector2 = Vector2.RIGHT
-var velocidade: float = 200.0
+var velocidade: float = 300.0
 var isOnScreen: bool = false
 
 func _physics_process(delta: float) -> void:

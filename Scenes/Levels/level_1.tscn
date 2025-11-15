@@ -96,20 +96,44 @@ position = Vector2(-2, -1660)
 [node name="Finish Area" parent="." instance=ExtResource("3_3mqfk")]
 position = Vector2(6, -1966)
 
-[node name="Helicoptero" parent="." instance=ExtResource("4_cyadu")]
-position = Vector2(-176, 77)
+[node name="Inimigos" type="Node" parent="."]
 
-[node name="Navio" parent="." instance=ExtResource("5_xgxfi")]
-position = Vector2(-198, -36)
+[node name="Jatos" type="Node" parent="Inimigos"]
 
-[node name="Jato" parent="." instance=ExtResource("6_5f3p6")]
+[node name="Jato" parent="Inimigos/Jatos" instance=ExtResource("6_5f3p6")]
 position = Vector2(-316, 217)
 
-[node name="Jato2" parent="." instance=ExtResource("6_5f3p6")]
+[node name="Jato2" parent="Inimigos/Jatos" instance=ExtResource("6_5f3p6")]
 position = Vector2(-438, -673)
 
-[node name="Jato3" parent="." instance=ExtResource("6_5f3p6")]
+[node name="Jato3" parent="Inimigos/Jatos" instance=ExtResource("6_5f3p6")]
 position = Vector2(-446, -1277)
 
-[node name="Jato4" parent="." instance=ExtResource("6_5f3p6")]
+[node name="Jato4" parent="Inimigos/Jatos" instance=ExtResource("6_5f3p6")]
 position = Vector2(-228, -2123)
+
+[node name="JatosEsquerda" type="Node" parent="Inimigos/Jatos"]
+
+[node name="JatosDireita" type="Node" parent="Inimigos/Jatos"]
+
+[node name="Jato5" parent="Inimigos/Jatos/JatosDireita" instance=ExtResource("6_5f3p6")]
+position = Vector2(431, -917)
+direcao = Vector2(-1, 0)
+
+[node name="Jato6" parent="Inimigos/Jatos/JatosDireita" instance=ExtResource("6_5f3p6")]
+position = Vector2(425, -1160)
+direcao = Vector2(-1, 0)
+
+[node name="Jato7" parent="Inimigos/Jatos/JatosDireita" instance=ExtResource("6_5f3p6")]
+position = Vector2(246, -1864)
+direcao = Vector2(-1, 0)
+
+[node name="Navios" type="Node" parent="Inimigos"]
+
+[node name="Navio" parent="Inimigos/Navios" instance=ExtResource("5_xgxfi")]
+position = Vector2(-198, -36)
+
+[node name="Helicopters" type="Node" parent="Inimigos"]
+
+[node name="Helicoptero" parent="Inimigos/Helicopters" instance=ExtResource("4_cyadu")]
+position = Vector2(-176, 77)
