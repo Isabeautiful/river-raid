@@ -7,12 +7,20 @@ const min_speed : float = 100
 
 const aux_parada : float = 100 #variavel para o player parar de andar pra sempre
 
+@onready var combustivel: Node = $Combustivel
+
 func _physics_process(delta: float) -> void:
 	#Collision Check
 	var collision = get_last_slide_collision()
 	if collision != null:
-		print("Explode")
-		get_tree().quit()
+		explode()
+	
+	#Verificar se está acelerando (indo para cima)
+	var acelerando = Input.is_action_pressed("cima")
+	
+	#Comunicar ao sistema de combustível se está acelerando
+	if combustivel:
+		combustivel.set_acelerando(acelerando)
 	
 	#Movimentacao Horizontal
 	if Input.is_action_pressed("esquerda"):
@@ -29,4 +37,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y = min(velocity.y + desaceleration * delta, -min_speed)
 	elif velocity.y < 0:
 		velocity.y = min(velocity.y + aux_parada * delta, -min_speed)
+	
 	move_and_slide()
+
+func explode():
+	print("Explode")
+	get_tree().quit()
