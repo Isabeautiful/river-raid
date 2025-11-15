@@ -14,7 +14,7 @@ var estado_movimento: String = "parado"  # "parado", "movendo", "acelerando"
 func _ready() -> void:
 	current = max_power
 	game_ui.setup_combustivel(max_power)
-	#Timer mais suave
+	#Timer mais suavea
 	decremento.wait_time = 0.05
 
 func _process(_delta: float) -> void:
@@ -55,3 +55,11 @@ func _on_decremento_timeout() -> void:
 # Função para o player comunicar seu estado de movimento
 func set_estado_movimento(estado: String):
 	estado_movimento = estado
+	
+# Nova função para reabastecer
+func reabastecer(quantidade: float):
+	current = min(max_power, current + quantidade)
+	# Força atualização imediata da UI
+	game_ui.atualizar_combustivel(current)
+	ultimo_valor_ui = current
+	print("Combustível reabastecido: ", current, "/", max_power)

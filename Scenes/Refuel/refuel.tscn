@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxbnmtnmv88sw"]
+
+[ext_resource type="Script" uid="uid://dxuxm2mu268nj" path="res://Scenes/Refuel/refuel.gd" id="1_on357"]
+[ext_resource type="Texture2D" uid="uid://8g0h6jwk58ch" path="res://Assets/icon.svg" id="1_sbnjl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbnjl"]
+size = Vector2(71, 146)
+
+[node name="Refuel" type="Area2D"]
+collision_layer = 16
+collision_mask = 5
+script = ExtResource("1_on357")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 2.264654, 1)
+scale = Vector2(0.5703125, 1.140625)
+texture = ExtResource("1_sbnjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sbnjl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
