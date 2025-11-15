@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dl2sc5fceclbx"]
 
-[ext_resource type="Script" uid="uid://dt2e5i08l3rvy" path="res://Scenes/Inimigos/helicoptero.gd" id="1_3rwh5"]
+[ext_resource type="Script" uid="uid://n15lkyyacgwa" path="res://Scenes/Inimigos/inimigo_padrao.gd" id="1_3rwh5"]
 [ext_resource type="Texture2D" uid="uid://8g0h6jwk58ch" path="res://Assets/icon.svg" id="1_evna8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evna8"]
@@ -8,7 +8,7 @@ size = Vector2(124, 94)
 
 [node name="Helicoptero" type="Area2D"]
 collision_layer = 40
-collision_mask = 5
+collision_mask = 7
 script = ExtResource("1_3rwh5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -27,5 +27,15 @@ position = Vector2(1, -2.5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_evna8")
 debug_color = Color(0.9964166, 0, 0.19589087, 0.41960785)
+
+[node name="Direita" type="RayCast2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+target_position = Vector2(38, 0)
+collision_mask = 2
+
+[node name="Esquerda" type="RayCast2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+target_position = Vector2(-36, 0)
+collision_mask = 2
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

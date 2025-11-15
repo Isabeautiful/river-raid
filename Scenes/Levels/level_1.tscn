@@ -97,10 +97,10 @@ position = Vector2(-2, -1660)
 position = Vector2(6, -1966)
 
 [node name="Helicoptero" parent="." instance=ExtResource("4_cyadu")]
-position = Vector2(-285, -753)
+position = Vector2(-176, 77)
 
 [node name="Navio" parent="." instance=ExtResource("5_xgxfi")]
-position = Vector2(-228, -1030)
+position = Vector2(-198, -36)
 
 [node name="Jato" parent="." instance=ExtResource("6_5f3p6")]
-position = Vector2(-162, -77)
+position = Vector2(-316, 217)
