@@ -104,3 +104,12 @@ position = Vector2(-198, -36)
 
 [node name="Jato" parent="." instance=ExtResource("6_5f3p6")]
 position = Vector2(-316, 217)
+
+[node name="Jato2" parent="." instance=ExtResource("6_5f3p6")]
+position = Vector2(-438, -673)
+
+[node name="Jato3" parent="." instance=ExtResource("6_5f3p6")]
+position = Vector2(-446, -1277)
+
+[node name="Jato4" parent="." instance=ExtResource("6_5f3p6")]
+position = Vector2(-228, -2123)

@@ -13,12 +13,10 @@ func _physics_process(delta: float) -> void:
 func verificar_colisoes() -> void:
 	# Verifica se o ray da direita está colidindo
 	if direita.is_colliding():
-		print("RayCast Direita colidiu com: ", direita.get_collider())
 		direcao = Vector2.LEFT
 	
 	# Verifica se o ray da esquerda está colidindo
 	if esquerda.is_colliding():
-		print("RayCast Esquerda colidiu com: ", esquerda.get_collider())
 		direcao = Vector2.RIGHT
 
 func mover(delta: float):
@@ -32,3 +30,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body as CharacterBody2D:
 		var player = get_tree().get_first_node_in_group("player")
 		player.explode()
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()
