@@ -9,7 +9,7 @@ size = Vector2(26, 62)
 [node name="Tiro" type="Area2D"]
 scale = Vector2(0.3, 0.3)
 collision_layer = 4
-collision_mask = 26
+collision_mask = 58
 script = ExtResource("1_vxbq8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

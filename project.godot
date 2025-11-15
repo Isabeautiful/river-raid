@@ -51,10 +51,13 @@ atirar={
 2d_render/layer_3="Tiro"
 2d_render/layer_4="Inimigo"
 2d_render/layer_5="Refuel"
+2d_render/layer_6="Atiravel"
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Ground"
 2d_physics/layer_3="Tiro"
 2d_physics/layer_4="Inimigo"
+2d_physics/layer_5="Refuel"
+2d_physics/layer_6="Atiravel"
 
 [rendering]
 

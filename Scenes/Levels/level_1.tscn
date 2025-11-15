@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://bueokca30afj6"]
+[gd_scene load_steps=6 format=4 uid="uid://bueokca30afj6"]
 
 [ext_resource type="Texture2D" uid="uid://8g0h6jwk58ch" path="res://Assets/icon.svg" id="1_tlcug"]
+[ext_resource type="PackedScene" uid="uid://dgx7qh6du2i10" path="res://Scenes/Levels/finish_area.tscn" id="3_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://cxbnmtnmv88sw" path="res://Scenes/Refuel/refuel.tscn" id="4_iixi8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4dpyx"]
@@ -88,3 +89,6 @@ position = Vector2(-223, -433)
 
 [node name="Refuel2" parent="." instance=ExtResource("4_iixi8")]
 position = Vector2(-2, -1660)
+
+[node name="Finish Area" parent="." instance=ExtResource("3_3mqfk")]
+position = Vector2(6, -1966)
