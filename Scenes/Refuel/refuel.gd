@@ -5,8 +5,6 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	# Verifica se é o player
 	if body as CharacterBody2D:
-		print("Reabastecendo combustível")
-		
 		# Tenta acessar o sistema de combustível do player
 		var combustivel_node = body.get_node("Combustivel")  # Ajuste o caminho se necessário
 		if combustivel_node and combustivel_node.has_method("reabastecer"):
