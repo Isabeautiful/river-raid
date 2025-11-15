@@ -39,9 +39,7 @@ func _physics_process(delta: float) -> void:
 		movendo_vertical = true
 	elif velocity.y < 0:
 		velocity.y = min(velocity.y + aux_parada * delta, -min_speed)
-		# Considera movimento se ainda está se movendo para frente (subindo)
-		if velocity.y < -10:  # Limite pequeno para considerar que ainda está se movendo
-			movendo_vertical = true
+		movendo_vertical = true
 	
 	# Determina o estado de movimento para o sistema de combustível
 	var estado = "parado"
