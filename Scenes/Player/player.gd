@@ -67,4 +67,4 @@ func _physics_process(delta: float) -> void:
 
 func explode():
 	print("Explode")
-	get_tree().change_scene_to_file("res://Scenes/UI/Menu/game_over.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/UI/Menu/game_over.tscn")
