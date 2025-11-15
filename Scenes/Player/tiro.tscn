@@ -9,7 +9,7 @@ size = Vector2(26, 62)
 [node name="Tiro" type="Area2D"]
 scale = Vector2(0.3, 0.3)
 collision_layer = 4
-collision_mask = 10
+collision_mask = 26
 script = ExtResource("1_vxbq8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -23,5 +23,6 @@ debug_color = Color(0.991069, 0, 0.27625036, 0.41960785)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

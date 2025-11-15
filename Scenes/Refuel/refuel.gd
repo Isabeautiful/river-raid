@@ -2,6 +2,10 @@ extends Area2D
 
 @export var quantidade_combustivel: float = 50.0  # Quantidade de combustível que este posto fornece
 
+func _ready() -> void:
+	# Adiciona a estação ao grupo para identificação
+	add_to_group("atiravel")
+
 func _on_body_entered(body: Node2D) -> void:
 	# Verifica se é o player
 	if body as CharacterBody2D:
