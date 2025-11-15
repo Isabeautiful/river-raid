@@ -8,6 +8,17 @@ const aux_parada : float = 100 #variavel para o player parar de andar pra sempre
 
 @onready var combustivel: Node = $Combustivel
 
+func _ready() -> void:
+	add_to_group("player")
+
+#gerenciamento de score:
+var score: int = 0
+
+func aumentar_score(pontos: int):
+	score += pontos
+	print("Score: ", score)
+
+
 func _physics_process(delta: float) -> void:
 	# Collision Check
 	var collision = get_last_slide_collision()

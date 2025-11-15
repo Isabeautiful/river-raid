@@ -10,6 +10,10 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("atiravel"):
 		body.queue_free()  # Destroi o objeto
 		queue_free()       # Destroi o tiro
+	# Nao eh Elif porque finish area tambem eh atiravel
+	if body.is_in_group("finish_area"):
+		var player = get_tree().get_first_node_in_group("player")
+		player.aumentar_score(1)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
