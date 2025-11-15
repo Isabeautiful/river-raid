@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfekwe4ddilws"]
+
+[ext_resource type="Script" uid="uid://dt2e5i08l3rvy" path="res://Scenes/Inimigos/helicoptero.gd" id="1_stxxr"]
+[ext_resource type="Texture2D" uid="uid://8g0h6jwk58ch" path="res://Assets/icon.svg" id="2_273dl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evna8"]
+size = Vector2(263, 82)
+
+[node name="Jato" type="Area2D"]
+collision_layer = 40
+collision_mask = 5
+script = ExtResource("1_stxxr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.7833333, 0, 1, 1)
+scale = Vector2(0.6312515, 0.21249957)
+texture = ExtResource("2_273dl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 0)
+scale = Vector2(0.3060614, 0.33999932)
+shape = SubResource("RectangleShape2D_evna8")
+debug_color = Color(0.9964166, 0, 0.19589087, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

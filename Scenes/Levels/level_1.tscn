@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://bueokca30afj6"]
+[gd_scene load_steps=9 format=4 uid="uid://bueokca30afj6"]
 
 [ext_resource type="Texture2D" uid="uid://8g0h6jwk58ch" path="res://Assets/icon.svg" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://dgx7qh6du2i10" path="res://Scenes/Levels/finish_area.tscn" id="3_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://dl2sc5fceclbx" path="res://Scenes/Inimigos/helicoptero.tscn" id="4_cyadu"]
 [ext_resource type="PackedScene" uid="uid://cxbnmtnmv88sw" path="res://Scenes/Refuel/refuel.tscn" id="4_iixi8"]
+[ext_resource type="PackedScene" uid="uid://dh0f58a6oejpb" path="res://Scenes/Inimigos/navio.tscn" id="5_xgxfi"]
+[ext_resource type="PackedScene" uid="uid://cfekwe4ddilws" path="res://Scenes/Inimigos/jato.tscn" id="6_5f3p6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4dpyx"]
 texture = ExtResource("1_tlcug")
@@ -96,3 +98,9 @@ position = Vector2(6, -1966)
 
 [node name="Helicoptero" parent="." instance=ExtResource("4_cyadu")]
 position = Vector2(-285, -753)
+
+[node name="Navio" parent="." instance=ExtResource("5_xgxfi")]
+position = Vector2(-228, -1030)
+
+[node name="Jato" parent="." instance=ExtResource("6_5f3p6")]
+position = Vector2(-162, -77)
