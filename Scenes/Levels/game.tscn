@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b24ea88agf1dv"]
+[gd_scene load_steps=9 format=3 uid="uid://b24ea88agf1dv"]
 
+[ext_resource type="Script" uid="uid://dpmkgsiuhmihh" path="res://Scenes/Levels/game.gd" id="1_ce5c8"]
 [ext_resource type="PackedScene" uid="uid://bueokca30afj6" path="res://Scenes/Levels/level_1.tscn" id="1_ds3o4"]
 [ext_resource type="PackedScene" uid="uid://blbk7e13bt3tu" path="res://Scenes/Levels/level_2.tscn" id="2_72uep"]
 [ext_resource type="PackedScene" uid="uid://cpj78cprxr27m" path="res://Scenes/Levels/level_3.tscn" id="3_b2ers"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bafblokbbf42b" path="res://Scenes/Camera/camera.tscn" id="7_ce5c8"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_ce5c8")
 
 [node name="Level 1" parent="." instance=ExtResource("1_ds3o4")]
 
