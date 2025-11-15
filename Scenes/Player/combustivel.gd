@@ -27,11 +27,6 @@ func _process(_delta: float) -> void:
 var consumo_accumulator: float = 0.0
 var ultimo_valor_ui: float = 100.0
 
-func _on_incremento_timeout() -> void:
-	if current < max_power:
-		current += 1
-		game_ui.atualizar_combustivel(current)  
-
 func _on_decremento_timeout() -> void:
 	var taxa_consumo_por_segundo = 0.0
 	

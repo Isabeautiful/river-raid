@@ -34,8 +34,4 @@ script = ExtResource("4_mtuoh")
 [node name="Decremento" type="Timer" parent="Combustivel"]
 autostart = true
 
-[node name="Incremento" type="Timer" parent="Combustivel"]
-wait_time = 0.1
-
 [connection signal="timeout" from="Combustivel/Decremento" to="Combustivel" method="_on_decremento_timeout"]
-[connection signal="timeout" from="Combustivel/Incremento" to="Combustivel" method="_on_incremento_timeout"]
